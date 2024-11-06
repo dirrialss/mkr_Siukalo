@@ -6,20 +6,14 @@ public class Main {
         System.out.println("My message:");
         System.out.println(handler.getProcessedMessage());
 
-        // Стиснення
-
-
-        // Шифрування
         handler.applyProcessor(new EncryptedMessageProcessor());
         System.out.println("After Encryption:");
         System.out.println(handler.getProcessedMessage());
 
-        // Додавання дати та часу
         handler.applyProcessor(new DateMessageProcessor());
         System.out.println("Date and time:");
         System.out.println(handler.getProcessedMessage());
 
-        // Додавання ПІБ автора
         handler.applyProcessor(new AuthorMessageProcessor());
         System.out.println("Adding author:");
         System.out.println(handler.getProcessedMessage());
